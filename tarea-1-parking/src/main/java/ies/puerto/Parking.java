@@ -22,9 +22,9 @@ public class Parking {
 
         do {
             System.out.println("Mira que habian nombres más bonitos...");
-            System.out.println("========================");
-            System.out.println("      PARKING MENÚ      ");
-            System.out.println("========================");
+            System.out.println("===========================");
+            System.out.println("      PARKING DAM-PRO      ");
+            System.out.println("===========================");
             System.out.println("1. Registrar vehículos");
             System.out.println("2. Calcular tarifa de estacionamiento");
             System.out.println("3. Mostrar resumen del día");
@@ -96,13 +96,14 @@ public class Parking {
                     break;
                 case 4:
 
-                    System.out.println("Salida del sistema con exito");
+                    System.out.println("¡Gracias por utilizar PARKING DAM-PRO!");
+                    scanner.close();
                     break;
                 default:
                     System.out.println("Opción no válida");
                     break;
             }
-        }
+        } while (opcion != 4);
     }
 }
 
