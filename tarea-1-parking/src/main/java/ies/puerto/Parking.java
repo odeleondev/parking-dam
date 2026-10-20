@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Parking {
     static void main() {
         Scanner scanner = new Scanner(System.in);
-        double tarifaHOra = 1.50;
+        double tarifaHora = 1.50;
         int totalVehiculos = 0;
         float totalHorasRegistradas = 0;
         float totalCalculosTarifa = 0;
@@ -21,6 +21,7 @@ public class Parking {
         String nombreUsuario = scanner.nextLine();
 
         do {
+            System.out.println("Mira que habian nombres más bonitos...");
             System.out.println("========================");
             System.out.println("      PARKING MENÚ      ");
             System.out.println("========================");
@@ -29,7 +30,7 @@ public class Parking {
             System.out.println("3. Mostrar resumen del día");
             System.out.println("4. Salir");
 
-            System.out.println("Elija una de las anteriores opciones para continuar");
+            System.out.println("Por favor, elija una de las anteriores opciones para continuar");
             opcion = scanner.nextInt();
 
             switch (opcion) {
@@ -37,11 +38,11 @@ public class Parking {
                     int cantidadVehiculos;
 
                     do {
-                        System.out.println("Cuántos vehículos quieres registrar?");
+                        System.out.println("Cuántos vehículos desea el usuario registrar?");
                         cantidadVehiculos = scanner.nextInt();
 
                         if (cantidadVehiculos <= 0) {
-                            System.out.println("Debe ser un número entero positivo");
+                            System.out.println("Debe ser un número entero positivo. Sino, no se puede registrar.");
                         }
                      } while (cantidadVehiculos <= 0);
                     scanner.nextLine();
@@ -53,11 +54,11 @@ public class Parking {
 
                         float horas;
                         do {
-                            System.out.println("Horas estacionadas:");
+                            System.out.println("Horas estacionadas del vehículo:");
                             horas = scanner.nextFloat();
 
                             if (horas <= 0) {
-                                System.out.println("Las horas deben ser mayores que 0");
+                                System.out.println("Las horas deben ser mayores que 0. No se puede ir atrás en el tiempo.");
                             }
                         } while (horas <= 0);
                         scanner.nextLine();
@@ -68,7 +69,23 @@ public class Parking {
                     System.out.println("Vehículos registrados en esta operación: "+ cantidadVehiculos);
                     break;
                 case 2:
+                    float horas = 0;
 
+                    do {
+                        System.out.println("Horas para calcular la tarifa:");
+                        horas = scanner.nextFloat();
+
+                        if (horas <= 0) {
+                            System.out.println("Las horas deben ser mayores que 0. ¿Se cree que tenemos máquinas para viajar al pasado?");
+                        }
+                    } while (horas <= 0);
+                    scanner.nextLine();
+
+                    float importe = (float) (horas*tarifaHora);
+
+                    totalCalculosTarifa++;
+                    importeTotalCalculado += importe;
+                    System.out.println("El importe es de: "+ importe +" euros.");
                     break;
                 case 3:
 
