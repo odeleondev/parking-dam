@@ -1,17 +1,23 @@
 package ies.puerto;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
+/**
+ * @author odeleondev
+ * @version 1.0.0
+ */
 public class Parking {
     static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+        Scanner scanner = new Scanner(System.in);
+        double tarifaHOra = 1.50;
+        int totalVehiculos = 0;
+        float totalHorasRegistradas = 0;
+        float totalCalculosTarifa = 0;
+        float importeTotalCalculado = 0;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
-        }
+        System.out.println("Introduzca su nombre de usuario:");
+        String nombreUsuario = scanner.nextLine();
+
+
     }
 }
