@@ -88,7 +88,11 @@ public class Parking {
                     System.out.println("El importe es de: "+ importe +" euros.");
                     break;
                 case 3:
-
+                    System.out.println("Usuario: "+ nombreUsuario);
+                    System.out.println("Vehículos registrados: "+ totalVehiculos);
+                    System.out.println("Horas registradas: "+ totalHorasRegistradas);
+                    System.out.println("Cálculos de tarifa: "+ totalCalculosTarifa);
+                    System.out.println("Importe total calculado: "+ importeTotalCalculado);
                     break;
                 case 4:
 
